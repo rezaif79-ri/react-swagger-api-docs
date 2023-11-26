@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from './pages/login/Login.jsx';
+import ApiDocs from './pages/api-docs/ApiDocs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+  {
+    path: "api-docs",
+    element: <ApiDocs />,
   }
 ]);
 
