@@ -1,7 +1,20 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
+
+const DUMMY_ACCESS_TOKEN = "ThisIsDummyAccesToken"
 
 export default function Login() {
-    return (
+  
+  const navigate = useNavigate();
+    useEffect(() => {
+      var token = localStorage.getItem("access_token");
+      if (token == DUMMY_ACCESS_TOKEN) {
+        navigate("/api-docs");
+      }
+    });
+  
+  return (
       <>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white rounded-md">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -38,11 +51,11 @@ export default function Login() {
                   <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                     Password
                   </label>
-                  <div className="text-sm">
+                  {/* <div className="text-sm">
                     <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                       Forgot password?
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mt-2">
                   <input
@@ -66,12 +79,12 @@ export default function Login() {
               </div>
             </form>
   
-            <p className="mt-10 text-center text-sm text-gray-500">
+            {/* <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
               <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                 Start a 14 day free trial
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </>
