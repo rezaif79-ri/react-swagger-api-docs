@@ -13,6 +13,7 @@ export default function ApiDocs() {
     useEffect(() => {
       var token = localStorage.getItem("access_token");
       if (token != DUMMY_ACCESS_TOKEN) {
+        alert("Authorization needed")
         navigate("/login");
       }
     });
