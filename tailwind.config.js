@@ -4,6 +4,7 @@ export default {
   content: [
     "./src/pages/login/*.{js,jsx,ts,tsx}",
     "./src/pages/app/*.{js,jsx,ts,tsx}",
+    "./src/pages/api-docs/components/*.{js,jsx,ts,tsx}",
     
   ],
   theme: {
